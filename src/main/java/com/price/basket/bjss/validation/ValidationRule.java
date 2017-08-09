@@ -1,8 +1,9 @@
 package com.price.basket.bjss.validation;
 
 import java.util.Hashtable;
+import java.util.Map;
 
 public interface ValidationRule {
 
-	void validate(String[] dataInput, Hashtable<String, String> dataReference);
+	void validate(String[] dataInput, Map<String, String> dataReference);
 }

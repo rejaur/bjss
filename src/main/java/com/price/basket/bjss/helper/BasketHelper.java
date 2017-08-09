@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 
 import org.springframework.stereotype.Component;
@@ -15,7 +16,7 @@ import com.price.basket.bjss.enums.Item;
 @Component
 public final class BasketHelper {
 
-	public BigDecimal calculateSubtotal(final List<String> listItems, final Hashtable<String, String> referenceData) {
+	public BigDecimal calculateSubtotal(final List<String> listItems, Map<String, String> referenceData) {
 
 		List<BigDecimal> listPrice = new ArrayList<>();
 
@@ -28,7 +29,7 @@ public final class BasketHelper {
 	}
 
 	public BigDecimal calculateAppleDiscounts(final List<String> listItems,
-			final Hashtable<String, String> referenceData) {
+			Map<String, String> referenceData) {
 
 		List<BigDecimal> listPrice = new ArrayList<>();
 
@@ -44,7 +45,7 @@ public final class BasketHelper {
 	}
 
 	public BigDecimal calculateLoafDiscount(final List<String> listItems,
-			final Hashtable<String, String> referenceData) {
+			Map<String, String> referenceData) {
 
 		List<BigDecimal> listPrice = new ArrayList<>();
 
@@ -65,7 +66,7 @@ public final class BasketHelper {
 		return resultAllDiscounts;
 	}
 
-	public void displayOuput(final List<String> listItems, final Hashtable<String, String> referenceData) {
+	public void displayOuput(final List<String> listItems, Map<String, String> referenceData) {
 		final BigDecimal subTotal = calculateSubtotal(listItems, referenceData);
 
 		final BigDecimal appleDiscounts = calculateAppleDiscounts(listItems, referenceData);
@@ -84,11 +85,11 @@ public final class BasketHelper {
 	private void displayOnCMDLine(final BigDecimal subTotal, final BigDecimal appleDiscountPrice,
 			BigDecimal loafDiscountPrice, BigDecimal totalAfterAllDiscountOffers) {
 
-		System.out.println("Subtotal: £" + subTotal);
+		System.out.println("Subtotal: ï¿½" + subTotal);
 
 		displayOffer(appleDiscountPrice, loafDiscountPrice);
 
-		System.out.println("Total: £" + totalAfterAllDiscountOffers);
+		System.out.println("Total: ï¿½" + totalAfterAllDiscountOffers);
 	}
 
 	private void displayOffer(final BigDecimal appleDiscountPrice, final BigDecimal loafDiscountPrice) {

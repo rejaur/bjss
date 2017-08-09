@@ -1,9 +1,7 @@
 package com.price.basket.bjss.service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Hashtable;
-import java.util.List;
+import java.util.*;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -26,7 +24,7 @@ public class BasketServiceImpl implements BasketService {
 	@Autowired
 	private BasketHelper basketHelper;
 	
-	private Hashtable<String, String> referenceData;
+	private Map<String, String> referenceData;
 
 	final static Logger logger = Logger.getLogger(AppLauncher.class);
 

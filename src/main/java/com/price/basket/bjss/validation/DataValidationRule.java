@@ -1,10 +1,6 @@
 package com.price.basket.bjss.validation;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
@@ -15,7 +11,7 @@ public class DataValidationRule implements ValidationRule {
 
 	@SuppressWarnings("rawtypes")
 	@Override
-	public void validate(final String[] dataInput, final Hashtable<String, String> referenceData) {
+	public void validate(final String[] dataInput, Map<String, String> referenceData) {
 
 		final List<String> dataInputArray = Arrays.asList(dataInput);  
 		

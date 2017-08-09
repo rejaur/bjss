@@ -1,6 +1,7 @@
 package com.price.basket.bjss.validation;
 
 import java.util.Hashtable;
+import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,7 @@ import com.price.basket.bjss.exception.ValidationException;
 public class NullValidationRule implements ValidationRule {
 
 	@Override
-	public void validate(final String[] dataInput,  final Hashtable<String, String> referenceData) {
+	public void validate(final String[] dataInput,  Map<String, String> referenceData) {
 		
 		for(String data : dataInput){
 			

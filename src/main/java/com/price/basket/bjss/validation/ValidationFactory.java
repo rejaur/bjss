@@ -3,6 +3,7 @@ package com.price.basket.bjss.validation;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Component
 public class ValidationFactory {
 
-	public static void validateInputData(final String[] args,  final Hashtable<String, String> dataReference) {
+	public static void validateInputData(final String[] args,  Map<String, String> dataReference) {
 		List<ValidationRule> rules = new ArrayList<>();
 
 		rules.add(new NullValidationRule());
